@@ -1,0 +1,6 @@
+define a class called mixer to merge two sorted array in ascending order with the following data members and member functions:
+member int arr[] 
+member int n
+methods void accept accept elements of array in ascending order without any duplicates
+mix(mixer a)  to merge 
+print
