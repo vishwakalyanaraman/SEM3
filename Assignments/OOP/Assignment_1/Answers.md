@@ -24,25 +24,28 @@
 	1)Java does not support pointers, templates, unions, operator overloading, structures etc. it supports references..
 	2)Java support automatic garbage collection.
 	3)Java is interpreted for the most part and hence platform independent. 
+	4)Java doesn't support multiple inheritance.
 
 	C++
 
 	1)C++ supports structures, unions, templates, operator overloading,pointers and pointer arithmetic.
 	2)C++ support destructors, which is automatically invoked when the object is destroyed.
 	3)C++ generates object code and the same code may not run on different platforms.  
+	4)C++ supports multiple inheritance.
 
 
 2A):
 
-	this() is a reference variable that refers to the current object. It can be used to
+	this is a reference variable that refers to the invoking object. It can be used to
 		1)refer current class instance variable.
 		2)invoke current class constructor.
 		3)this can be passed as an argument in the method/constructor call.
+		4)this helps to override instance variable hiding in case the parameters passed into a function or a parameterized constructor share the same names. 
 
 2B):
 	
 	Because this refers to the object instance.
-	There is no object instance in a call of a 	static method.
+	There is no object instance in a call of a static method.
 
 			
 3A):
@@ -52,7 +55,16 @@
 	The advantage of for-each loop is that it eliminates the possibility of bugs and makes the code more readable.
 	It is faster than the normal for loop
 
-3B):
+3B): The short circuit logical operator desn't care to evaluate the right side operand if the outcome of the expression can be determined by the left side alone. This is particularly useful in a situation where we are required to check the right side only if the left side holds good. For example (the most cliched example):
+
+Consider division. We can't divide a number by the denominator if it is zero. To check this out, before we check for another condition, say if the quotient is greater than 10, we can simply do this in one line:
+if(denom!=0&&num/denom>10)
+{
+//code
+}
+This saves us from unwanted errors if the denom were zero. In that case it would just break the if without evaluating the right side (num/denom)>10.
+
+Links: http://stackoverflow.com/questions/8759868/java-logical-operator-short-circuiting
 
 
 4A):
