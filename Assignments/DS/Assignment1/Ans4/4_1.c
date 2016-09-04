@@ -39,7 +39,5 @@ void main()
 		j=memRelease(&table[i]);
 
 	free(table);
-	if(table=NULL)
-	printf("NULLLL");
 
 }
