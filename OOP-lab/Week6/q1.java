@@ -23,9 +23,9 @@ class Person
 		System.out.println("Name : ");name=sc.nextLine();
 		do{
 			System.out.println("Date of Birth [dd/mm/yyyy]: ");dob=sc.nextLine();
-			d=Integer.parseInt(dob.substring(0, 1));
-			m=Integer.parseInt(dob.substring(2,  3));
-			y=Integer.parseInt(dob.substring(4, 7));
+			d=Integer.parseInt(dob.substring(0, 2));
+			m=Integer.parseInt(dob.substring(3,  5));
+			y=Integer.parseInt(dob.substring(6, 10));
 		}while(d>0 & m>0 & y>0 & d<=31 & m<=12);
 	}
 	void printPerson()
