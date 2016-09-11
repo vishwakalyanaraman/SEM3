@@ -25,7 +25,6 @@
 	2)Java support automatic garbage collection.
 	3)Java is interpreted for the most part and hence platform independent. 
 	4)Java doesn't support multiple inheritance.
-	5)Java has applet's, which work with webrowsers.
 
 	C++
 
@@ -33,7 +32,6 @@
 	2)C++ support destructors, which is automatically invoked when the object is destroyed.
 	3)C++ generates object code and the same code may not run on different platforms.  
 	4)C++ supports multiple inheritance.
-	5)C++ has no web support!
 
 
 2A):
