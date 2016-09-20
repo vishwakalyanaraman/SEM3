@@ -1,25 +1,19 @@
-/*Recursion to find Combination(Factorial)*/
 #include <stdio.h>
 
-int fact(int n)
+double comb(double n,double r)
 {
-	
-	if(n>=1)
-		return n*fact(n-1);
-	else
-		return 1;
+    if(r==1)
+        return n;
+    else
+    {
+        return ((n/r)*(comb(n-1,r-1)));
+    }
 }
-
-int Combination(int n,  int r)
-{
-	return fact(n)/(fact(r)*fact(n-r));
-}
-
 int main()
 {
-	printf("Enter n and r\n");
-	int n, r;
-	scanf("%d%d",&n,&r);
-	printf("Combination nCr is : %d\n",Combination(n,r));
-	return 0;
+    double n,r;
+    scanf("%lf %lf",&n,&r);
+    double a = comb(n,r);
+    printf("%lf\n",a);
+    return 0;
 }
