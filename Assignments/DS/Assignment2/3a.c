@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define MAX 3
+#define MAX 1000
 
 int top[2]={-1,MAX};
 int a[MAX];
