@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define max 3
+#define max 10
 
 void push(int queue[],int * front, int *rear,int element)
 {
@@ -62,7 +62,7 @@ void main()
 		 			break;
 		 	default:;
 		 }
-		 printf("\n\nFront\t%d\nRear\t%d\n\n",front,rear );
+
 		}
 
 }
