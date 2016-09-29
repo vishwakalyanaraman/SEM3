@@ -2,7 +2,6 @@ module muxbcd2gr(b,g);
 input [3:0]b;
 output [3:0]g;
 wire [0:7]m,q,w,e;
-integer k;
 assign q=8'b00001111;
 mux8to1 stage0(q,b[3:1],g[3]);
 assign w=8'b00111100;
