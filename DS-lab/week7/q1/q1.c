@@ -1,22 +1,18 @@
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 10
-typedef struct
-{
+typedef struct{
 	int data[MAX];
 	int f,r;
 }DeQueue;
 
 typedef enum{False,True}Bool;
 
-Bool isEmpty(DeQueue* dq)
+Bool isEmpty(DeQueue dq)
 {
-	if(dq->f==dq->r)
+	if(dq.f==dq.r)
 	{
-		dq->f=dq->r=-1;
-		printf("Empty");
+		//printf("Empty");
 		return True;
 	}
 	return False;
@@ -25,19 +21,21 @@ Bool isEmpty(DeQueue* dq)
 
 int deleteLeft(DeQueue* dq)
 {
-	if(isEmpty(dq)==False)
+	if(isEmpty(*dq)==False)
 	{
 		return dq->data[dq->f++];
 	}
+	dq->f=dq->r=-1;
 	return 0;
 }
 int deleteRight(DeQueue* dq)
 {
-	if(isEmpty(dq)==False)
-		{
-			return dq->data[dq->r--];
-		}
-		return 0;
+	if(isEmpty(*dq)==False)
+	{
+		return dq->data[dq->r--];
+	}
+	dq->f=dq->r=-1;
+	return 0;
 }
 void addLeft(DeQueue* dq,int item)
 {
@@ -70,7 +68,7 @@ void addRight(DeQueue* dq,int item)
 }
 void disp(DeQueue dq)
 {
-	if(dq.f<dq.r)
+	if(isEmpty(dq)==False)
 	{
 		int i=0;
 		for(i=dq.f+1;i<=dq.r;i++)
@@ -124,3 +122,4 @@ int main()
 	}while(ans==1);
 	return 0;
 }
+
