@@ -2,10 +2,7 @@ module prg2_2(b,f);
 input [2:0]b;
 output f;
 wire [3:0]m;
-assign m[0]=~b[0];
-assign m[1]=1;
-assign m[2]=0;
-assign m[3]=b[0];
+assign m={~b[0],1'b0,1'b1,~b[0]};
 mux4to1 stage(m,b[2:1],f);
 endmodule
 
