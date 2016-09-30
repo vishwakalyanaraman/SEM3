@@ -1,56 +1,64 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>8
 #include<ctype.h>
-char    operand[50];
+#include<stdio.h>
+#include<conio.h>
+#define MAX 20
+#include<string.h>
+
+void convert_postfix(char x);
+char stack[MAX][MAX];
+void prefix_to_postfix(char prefix[],char postfix[]);
+
 int top;
-void push(int   ele)
+/* Array 'stack[][]' is being used as a stack of strings */
+
+void main()
 {
-    if(top!=49)
-    {
-     operand[++top]=ele;
-    }
-}
-char    pop()
-{
-    char    c;
-    c=operand[top];
-    top--;
-    return  c;
-}
-int main()
-{
-    char    prefix[50],ch,postfix[50],op1,op2;
-    int i=0,j=0,len=0,ct=0;
+    char postfix[30],prefix[30];
+    clrscr();
+    printf("\nEnter a prefix expression :");
     gets(prefix);
-    len=strlen(prefix);
-    i=len-1;
-    for(;i>=0;i--)
-    {   ch=prefix[i];
-        if(isalnum(ch))
-        {
-            push(ch);
-        }
-        else
-        {
-            if(ct==0)
-            {
-              op1=pop();
-              op2=pop();
-              postfix[j++]=op1;
-              postfix[j++]=op2;
-              postfix[j++]=ch;
-              ct++;
-            }
-            else
-            {
-                op2=pop();
-                postfix[j++]=op2;
-                postfix[j++]=ch;
-            }
-        }
-    }
-    postfix[j]='\0';
-    puts(postfix);
-    return  0;
+    prefix_to_postfix(prefix,postfix);
+    printf("\nPostfix :    %s",postfix);
+    getch();
 }
+
+   void prefix_to_postfix(char prefix[],char postfix[])
+     {
+       char x,st1[20];
+       int i;
+       top=-1;
+       for(i=strlen(prefix)-1;i>=0;i--) //scan the prefix string from
+         {                              //right to left.
+          x=prefix[i];
+          if(isalnum(x))
+            {
+            /* convert token to string form */
+            st1[0]=x;
+            st1[1]='\0';
+            // push the operand on the stack s2
+            top=top+1;
+            strcpy(stack[top],st1);
+             }
+        else  // if operator, convert to postfix
+             {
+              convert_postfix(x);
+             }
+          }
+    //Result is on top of the stack
+    strcpy(postfix,stack[top]);
+}
+
+
+
+void convert_postfix(char x)
+{       char st1[30],st2[30];
+    st2[0]=x;
+    st2[1]='\0';
+    strcpy(st1,stack[top]);
+    strcat(st1,stack[top-1]);
+    strcat(st1,st2);
+    top=top-1;
+    strcpy(stack[top],st1);
+}
+
+
