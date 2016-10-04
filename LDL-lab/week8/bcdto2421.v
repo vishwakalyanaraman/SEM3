@@ -1,7 +1,7 @@
 module bcdto2421(b,w);
 input [3:0] b;
 output [3:0] w;
-wire [3:0] a,c,d,e;
+wire [3:0] a,c,d;
 assign a={1'b1,1'b1,b[1]|b[0],1'b0};
 mux4to1 stage0(a,b[3:2],w[3]);
 assign c={1'b1,1'b1,b[1]|~b[0],1'b0};
