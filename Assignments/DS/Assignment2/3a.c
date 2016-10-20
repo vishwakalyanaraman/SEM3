@@ -33,7 +33,7 @@ int push(int s,int element)
                 return s;
             }
 
-        a[--top[1]]=element;
+        a[--top[1]]=element;//Associativity issue, left right
 
     }
     return s;
@@ -46,7 +46,7 @@ void pop(s)
         if(top[0]==-1)
             printf("Stack Underflow\n");
         else
-            --top[0];
+            --top[0];//Associativity issue
 
     }
     if(s==2)
@@ -54,7 +54,7 @@ void pop(s)
          if(top[1]==MAX)
             printf("Stack Underflow\n");
             else
-                --top[1];
+                --top[1];//Bug ( should be ++)
     }
 }
 
