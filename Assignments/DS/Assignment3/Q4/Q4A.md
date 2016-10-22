@@ -8,7 +8,7 @@ Enter n
 11  
 Enter data and link  
 HAT 11 NULL -1 CAT 4 EAT 9 NULL -1 NULL -1 WAT 0 BAT 3 FAT 1 NULL -1 VAT 7  
-1&emsp;&emsp;HAT&emsp;&emsp;11  
+1&#09;HAT&#09;11  
 2  
 3&emsp;&emsp;CAT&emsp;&emsp;4  
 4&emsp;&emsp;EAT&emsp;&emsp;9  
