@@ -4,7 +4,7 @@ The trail data has been manipulated a bit so that the link list can be terminate
 
 ###**On Console**
 
-Enter n
+Enter n\s\s
 11
 Enter data and link
 HAT 11 NULL -1 CAT 4 EAT 9 NULL -1 NULL -1 WAT 0 BAT 3 FAT 1 NULL -1 VAT 7
