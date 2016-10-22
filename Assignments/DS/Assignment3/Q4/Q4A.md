@@ -1,5 +1,4 @@
-The data with NULL and -1 are not required and must be ignored.
-
+The data with NULL and -1 are not required and must be ignored. 
 The trail data has been manipulated a bit so that the link list can be terminated and the output can be displayed.
 
 ###**On Console**
