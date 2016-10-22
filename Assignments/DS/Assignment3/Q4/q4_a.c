@@ -71,4 +71,4 @@ void main(){
 	display(head);
 }
 
-/*	HAT 11 NULL -1 CAT 4 EAT 9 NULL -1 NULL -1 WAT 0 BAT 3 FAT 1 NULL -1 VAT 7 */
+//	HAT 11 NULL -1 CAT 4 EAT 9 NULL -1 NULL -1 WAT 0 BAT 3 FAT 1 NULL -1 VAT 7
