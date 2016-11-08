@@ -2,7 +2,7 @@
 
 which works. Modified it to include multiplication.
 
-Please test the multiplication function for more test cases. Normal style multiplication. */
+Please test the multiplication function for more test cases. Normal style multiplication. Read the numbers from right to left. */
 
 
 
