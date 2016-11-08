@@ -59,3 +59,6 @@ void deleteNode(struct node **head_ref, struct node *del)
   return;
 }     
  
+More info regarding complexity-
+http://stackoverflow.com/questions/15563043/when-is-doubly-linked-list-more-efficient-than-singly-linked-list
+http://stackoverflow.com/questions/1895769/time-complexity-of-node-deletion-in-singly-and-doubly-linked-lists
