@@ -1,4 +1,4 @@
-import java.io.*;
+limport java.io.*;
 import java.util.*;
 public class lab10_1
 {
