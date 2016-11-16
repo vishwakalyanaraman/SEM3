@@ -21,17 +21,17 @@ public void paint(Graphics g)
 
 g.setColor(Color.BLACK);
 
-g.drawOval(0,0,50,50);
-g.fillOval(60,0,50,50);
-g.drawOval(120,0,50,50);
+g.drawOval(000,000,50,50);
+g.fillOval(100,000,50,50);
+g.drawOval(200,000,50,50);
 
-g.fillOval(0,60,50,50);
-g.drawOval(60,60,50,50);
-g.fillOval(120,60,50,50);
+g.fillOval(000,100,50,50);
+g.drawOval(100,100,50,50);
+g.fillOval(200,100,50,50);
 
-g.drawOval(0,120,50,50);
-g.fillOval(60,120,50,50);
-g.drawOval(120,120,50,50);
+g.drawOval(000,200,50,50);
+g.fillOval(100,200,50,50);
+g.drawOval(200,200,50,50);
 
 }
 
