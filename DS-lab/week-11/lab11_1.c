@@ -20,17 +20,6 @@ NODE create(NODE root,int x)
         root->ll=create(root->ll,x);
     return root;
 }
-NODE inorder_succ(NODE a)
-{
-    NODE p=a;
-    if(p->rl!=NULL)
-   p=p->rl;
-   while(p->ll->ll!=NULL)
-   {
-        p=p->ll;
-   }
-   return p;
-}
 void del(NODE root,int val)
 {
     NODE succ=NULL;
@@ -97,16 +86,23 @@ void del(NODE root,int val)
         free(cur);
        }
    }
-   else
+   else if(cur->ll!=NULL&& cur->rl!=NULL)
    {
-       succ=inorder_succ(cur);
-       printf("\n\n%d",succ->ll->data);
-       temp=cur->data;
-       cur->data=succ->ll->data;
-       succ->ll->data=temp;
-       succ->ll=NULL;
-       free(succ->ll);
-
+       NODE succ=cur->rl->ll;
+       NODE succ_p=cur->rl;
+       if(succ!=NULL && succ->ll!=NULL)
+       {
+           while(succ->ll!=NULL)
+           {
+            succ_p=succ;
+            succ=succ->ll;
+           }
+       }
+       temp=succ->data;
+       succ->data=cur->data;
+       cur->data=temp;
+       succ_p->ll=NULL;
+       free(succ);
    }
 
 }
