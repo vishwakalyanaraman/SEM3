@@ -1,0 +1,5 @@
+An applet must use multithreading if it needs to run continually because applets are event-driven programs 
+which must not enter a “mode” of operation. 
+For example, if start( ) never returns, then paint( ) will never be called.
+
+Use q3-> the digital watch program to explain. Or insert a better example below:
